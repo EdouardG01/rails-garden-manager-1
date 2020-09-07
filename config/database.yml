@@ -13,6 +13,10 @@
 #
 # Configure Using Gemfile
 # gem 'pg'
+
+production:
+  <<: *default
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
 #
 default: &default
   adapter: postgresql
